@@ -1,0 +1,19 @@
+#page {
+    margin: 5em auto;
+    width: 85%;
+    text-align: center;
+    font-family: 'PT Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+#page h1 {
+    font-size: 5em;
+}
+
+#page p {
+    font-size: 3em;
+}
+
+#page a {
+    color: #f33;
+    text-decoration: none;
+}
