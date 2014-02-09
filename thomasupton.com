@@ -12,32 +12,32 @@
 ##
 
 server {
-	listen   80; ## listen for ipv4; this line is default and implied
-	listen   [::]:80 default ipv6only=on; ## listen for ipv6
+    listen   80; ## listen for ipv4; this line is default and implied
+    listen   [::]:80 default ipv6only=on; ## listen for ipv6
 
-	root /home/thomas/thomasupton.com/public;
-	index index.html index.htm;
+    root /home/thomas/thomasupton.com/public;
+    index index.html index.htm;
 
-	server_name www.thomasupton.com;
+    server_name www.thomasupton.com;
 
     # Rewrite old Wordpress blog urls
     rewrite ^/blog(.*) $scheme://blog.thomasupton.com$1;
 
-	location / {
-		# First attempt to serve request as file, then
-		# as directory, then fall back to index.html
-		try_files $uri $uri/ /index.html;
-		# Uncomment to enable naxsi on this location
-		# include /etc/nginx/naxsi.rules
-	}
+    location / {
+        # First attempt to serve request as file, then
+        # as directory, then fall back to index.html
+        try_files $uri $uri/ /index.html;
+        # Uncomment to enable naxsi on this location
+        # include /etc/nginx/naxsi.rules
+    }
 
-	#error_page 404 /404.html;
+    #error_page 404 /404.html;
 
-	# redirect server error pages to the static page /50x.html
-	error_page 500 502 503 504 /50x.html;
-	location = /50x.html {
-		root /usr/share/nginx/www;
-	}
+    # redirect server error pages to the static page /50x.html
+    error_page 500 502 503 504 /50x.html;
+    location = /50x.html {
+        root /usr/share/nginx/www;
+    }
 }
 
 # Redirect to www.*
