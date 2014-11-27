@@ -23,3 +23,13 @@ body {
     color: #f33;
     text-decoration: none;
 }
+
+#page .headline {
+    letter-spacing: 0.1em;
+}
+
+#page .blurb {
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    line-height: 1.6em;
+}
